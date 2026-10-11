@@ -1,0 +1,3 @@
+const {createHmac,randomBytes,timingSafeEqual}=require('node:crypto');
+function visitorIdentity(cookie,key){let id,issue=false;const parts=(cookie||'').split('.');if(parts.length===2&&/^[a-f0-9]{32}$/.test(parts[0])&&/^[a-f0-9]{64}$/.test(parts[1])){const signature=createHmac('sha256',key).update(parts[0]).digest('hex');if(timingSafeEqual(Buffer.from(signature),Buffer.from(parts[1])))id=parts[0];}if(!id){id=randomBytes(16).toString('hex');issue=true;}const signature=createHmac('sha256',key).update(id).digest('hex');const digest=createHmac('sha256',key).update('ip:'+id).digest('hex');return{cookie:`${id}.${signature}`,issue,ip:'fd00:'+digest.slice(0,28).match(/.{4}/g).join(':')};}
+module.exports={visitorIdentity};

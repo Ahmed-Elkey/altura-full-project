@@ -1,0 +1,46 @@
+{
+  "name": "altura-store",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "tsc --noEmit",
+    "check:local": "node scripts/check-project.mjs",
+    "dev:local": "next dev --hostname 127.0.0.1 --port 3100",
+    "local:start": "node scripts/start-dev-detached.mjs 3100",
+    "portfolio:check": "node scripts/local-stack.mjs check",
+    "portfolio:build": "node scripts/local-stack.mjs build",
+    "portfolio:start": "node scripts/local-stack.mjs start",
+    "portfolio:prisma-status": "node scripts/local-stack.mjs prisma-status",
+    "qa:functional": "playwright test tests/functional.spec.ts",
+    "qa:visual": "playwright test tests/visual.spec.ts",
+    "local:preview": "node scripts/start-dev-detached.mjs 3100 --production",
+    "cloud:demo": "docker compose up --build -d",
+    "qa:cloud-bootstrap": "node scripts/verify-cloud-bootstrap.cjs"
+  },
+  "dependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "framer-motion": "^12.0.0",
+    "next": "^15.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "typescript": "^5.7.0"
+  },
+  "overrides": {
+    "next": {
+      "postcss": "8.5.23"
+    }
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@tailwindcss/postcss": "^4.0.0",
+    "@types/pngjs": "^6.0.5",
+    "pixelmatch": "^7.2.0",
+    "pngjs": "^7.0.0",
+    "tailwindcss": "^4.0.0"
+  }
+}

@@ -1,0 +1,40 @@
+// Local integration QA. Real database; captured mail transport; no outbound email.
+const fs=require('fs'),assert=require('assert/strict'),{randomUUID}=require('crypto');
+const env=require('../backend/node_modules/dotenv').parse(fs.readFileSync(require('path').join(__dirname,'../backend/.env')));
+const db=new URL(env.DATABASE_URL);assert.ok(['localhost','127.0.0.1'].includes(db.hostname)&&db.port==='5434'&&db.pathname==='/altura_friend');
+const {PrismaClient,Prisma}=require('../backend/node_modules/@prisma/client');
+const {ConfigService}=require('../backend/node_modules/@nestjs/config');
+const {NewsletterService}=require('../backend/dist/src/modules/newsletter/newsletter.service');
+const {DiscountsService}=require('../backend/dist/src/modules/discounts/discounts.service');
+const prisma=new PrismaClient({datasources:{db:{url:env.DATABASE_URL}}});
+const email=`qa-newsletter-${randomUUID()}@example.invalid`;let subscriberId,rewardId,orderId,adminId,customerId,stage='subscribe',captured=[];
+const service=new NewsletterService(prisma,new ConfigService(env),{assertConfigured(){},async sendMessage(address,message){assert.equal(address,email);captured.push(message);}});
+const flush=async()=>{for(let i=0;i<30;i++){await new Promise(r=>setTimeout(r,50));const row=await prisma.newsletterSubscriber.findUnique({where:{email}});if(row?.welcomeStatus==='SENT')return;}throw Error('Delivery capture timed out');};
+const token=(purpose,index=0)=>new URLSearchParams(new URL(captured[index].text.match(new RegExp('http[^\\s]+/newsletter/'+purpose+'#token=[^\\s]+'))[0]).hash.slice(1)).get('token');
+(async()=>{try{
+ await Promise.all([service.subscribe(email),service.subscribe(email.toUpperCase())]);await flush();
+ let row=await prisma.newsletterSubscriber.findUnique({where:{email},include:{rewardDiscount:true}});subscriberId=row.id;rewardId=row.rewardDiscountId;
+ assert.equal(captured.length,1);assert.equal(row.status,'PENDING');assert.equal(row.rewardDiscount.active,false);
+ const discounts=new DiscountsService(prisma),input={code:row.rewardDiscount.code,email,subtotal:new Prisma.Decimal(200),shippingTotal:new Prisma.Decimal(12),currency:'EGP'};
+ stage='confirmation required';await assert.rejects(discounts.evaluate(input));
+ stage='confirmation through live API';const response=await fetch('http://127.0.0.1:4000/api/v1/newsletter/confirm',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({token:token('confirm')})});assert.equal(response.status,201);assert.equal((await response.json()).reward.value,10);
+ stage='email ownership and product-only quote';let quote=await discounts.evaluate({...input,email:email.toUpperCase()});assert.equal(Number(quote.itemDiscount),20);assert.equal(Number(quote.shippingDiscount),0);await assert.rejects(discounts.evaluate({...input,email:'other@example.invalid'}));
+ stage='duplicate request';await service.subscribe(email);await new Promise(r=>setTimeout(r,100));assert.equal(captured.length,1);
+ stage='record one order use';const order=await prisma.order.create({data:{orderNumber:'QA-NL-'+randomUUID(),email,subtotal:200,discountTotal:20,shippingTotal:12,grandTotal:192,appliedCode:input.code,status:'CANCELLED',internalNote:'Synthetic newsletter QA; no inventory touched'}});orderId=order.id;
+ await prisma.discountUsage.create({data:{discountId:rewardId,orderId,amount:20}});await assert.rejects(discounts.evaluate(input));
+ stage='admin list and usage';const list=await service.list({page:1,limit:25,q:email});assert.equal(list.total,1);assert.equal(list.items[0].reward.usageCount,1);assert.deepEqual(list.items[0].reward.orderNumbers,[order.orderNumber]);
+ stage='admin endpoint permissions and filters';
+ const {JwtTokenService}=require('../backend/dist/src/common/security/jwt-token.service');const {JwtService}=require('../backend/node_modules/@nestjs/jwt');const jwt=new JwtTokenService(new ConfigService(env),new JwtService());
+ const admin=await prisma.user.create({data:{email:'qa-admin-'+randomUUID()+'@example.invalid',passwordHash:'synthetic-unusable-password-hash',role:'ADMIN'}});adminId=admin.id;
+ const customer=await prisma.user.create({data:{email:'qa-customer-'+randomUUID()+'@example.invalid',passwordHash:'synthetic-unusable-password-hash',role:'CUSTOMER'}});customerId=customer.id;
+ const auth=user=>({Authorization:'Bearer '+jwt.issue({sub:user.id,email:user.email,role:user.role,ver:user.authVersion}).token});
+ const url='http://127.0.0.1:4000/api/v1/admin/newsletter?page=1&limit=25&q='+encodeURIComponent(email);
+ assert.equal((await fetch(url)).status,401);assert.equal((await fetch(url,{headers:auth(customer)})).status,403);const result=await fetch(url,{headers:auth(admin)});assert.equal(result.status,200);assert.equal((await result.json()).items[0].reward.usageCount,1);
+ assert.equal((await fetch(url+'&status=PENDING',{headers:auth(admin)})).status,200);assert.equal((await fetch(url+'&status=invalid',{headers:auth(admin)})).status,400);
+ stage='unsubscribe';await service.unsubscribe(token('unsubscribe'));await service.unsubscribe(token('unsubscribe'));await assert.rejects(service.confirm(token('confirm')));await assert.rejects(service.retry(subscriberId));
+ row=await prisma.newsletterSubscriber.findUnique({where:{email},include:{rewardDiscount:true}});assert.ok(row.confirmedAt);assert.equal(row.rewardDiscount.active,true);const originalExpiry=row.rewardDiscount.endsAt.getTime();
+ stage='explicit re-subscribe without renewing reward';await service.subscribe(email);await flush();assert.equal(captured.length,2);assert.equal((await service.confirm(token('confirm',1))).reward,null);row=await prisma.newsletterSubscriber.findUnique({where:{email},include:{rewardDiscount:true}});assert.equal(row.rewardDiscountId,rewardId);assert.equal(row.rewardDiscount.endsAt.getTime(),originalExpiry);
+ stage='expiry';await prisma.discountUsage.deleteMany({where:{discountId:rewardId}});await prisma.discount.update({where:{id:rewardId},data:{endsAt:new Date(Date.now()-1000)}});await assert.rejects(discounts.evaluate(input));
+ console.log('PASS: concurrent subscription sends one captured welcome; confirmation, personal 10% product-only quote, wrong email, one-use order, admin usage, unsubscribe, no renewal, and expiry. No outbound email; synthetic records cleaned.');
+ }finally{const row=await prisma.newsletterSubscriber.findUnique({where:{email}});if(row){subscriberId=row.id;rewardId=row.rewardDiscountId;}if(rewardId)await prisma.discountUsage.deleteMany({where:{discountId:rewardId}});if(orderId)await prisma.order.delete({where:{id:orderId}});if(subscriberId)await prisma.newsletterSubscriber.delete({where:{id:subscriberId}});if(rewardId)await prisma.discount.delete({where:{id:rewardId}});if(adminId)await prisma.user.delete({where:{id:adminId}});if(customerId)await prisma.user.delete({where:{id:customerId}});await prisma.$disconnect();}
+})().catch(()=>{console.error('Newsletter QA failed at:',stage,'(sensitive details omitted)');process.exitCode=1;});

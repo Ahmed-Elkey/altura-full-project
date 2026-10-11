@@ -1,0 +1,1 @@
+ALTER TYPE "PaymentProvider" ADD VALUE 'CASH_ON_DELIVERY';

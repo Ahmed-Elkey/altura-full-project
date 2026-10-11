@@ -1,0 +1,5 @@
+.images { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.images > form { min-width: 0; padding: 10px; border: 1px solid var(--line); }
+.images label { display: block; margin-bottom: 10px; }
+.images input:not([type="checkbox"]) { width: 100%; min-width: 0; box-sizing: border-box; padding: 8px; border: 1px solid var(--line); color: var(--text); background: var(--surface); }
+@media (max-width: 560px) { .images { grid-template-columns: 1fr; } }

@@ -1,0 +1,24 @@
+import {test,expect,type Page} from '@playwright/test';
+test.use({trace:'off',screenshot:'off'});
+async function mock(page:Page,role='CUSTOMER'){
+ await page.route('**/api/v1/**',r=>{const path=new URL(r.request().url()).pathname;const headers={'Access-Control-Allow-Origin':'http://127.0.0.1:3100','Access-Control-Allow-Credentials':'true','Access-Control-Allow-Headers':'Content-Type,Authorization','Access-Control-Allow-Methods':'GET,POST,OPTIONS'};if(r.request().method()==='OPTIONS')return r.fulfill({status:204,headers});let json:object={};if(path.endsWith('/users/me/addresses'))json=[];if(path.endsWith('/auth/refresh'))json={user:{id:'select-qa',email:'select@example.invalid',role,status:'ACTIVE',firstName:'Select'},accessToken:'synthetic'};else if(path.endsWith('/support/me')||path.endsWith('/admin/support'))json={items:[],page:1,total:0,limit:25};return r.fulfill({headers,json});});
+}
+for(const width of [390,768,1440])for(const role of ['CUSTOMER','ADMIN'])test(`${role} support select and picker at ${width}px`,async({page})=>{
+ await mock(page,role);await page.setViewportSize({width,height:900});await page.goto(role==='ADMIN'?'/admin/support':'/account/support');const select=page.getByRole('combobox',{name:'Support status',exact:true});await expect(select).toBeVisible();
+ const style=await select.evaluate(el=>({appearance:getComputedStyle(el).appearance,padding:getComputedStyle(el).paddingRight,font:getComputedStyle(el).fontFamily}));expect(style.font).toContain('Inter');expect(style.appearance).toBe('base-select');expect(parseFloat(style.padding)).toBeGreaterThanOrEqual(14);
+ await select.click();await expect(select).toHaveJSProperty('value','');expect(await select.evaluate(el=>el.matches(':open'))).toBe(true);
+ const menu=await select.evaluate(el=>({radius:getComputedStyle(el,'::picker(select)').borderRadius,font:getComputedStyle(el,'::picker(select)').fontFamily}));expect(menu.radius).toBe('12px');expect(menu.font).toContain('Inter');
+ await page.getByRole('option',{name:'Resolved',exact:true}).click();await expect(select).toHaveValue('RESOLVED');await select.focus();await page.keyboard.press('Space');await page.keyboard.press('Escape');await expect(select).toBeFocused();expect(await select.evaluate(el=>el.matches(':open'))).toBe(false);
+ await select.selectOption('OPEN');await page.getByRole('button',{name:'Search',exact:true}).click();await expect(select).toHaveValue('OPEN');expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1)).toBe(true);
+});
+test('footer localization reserves enough space for value and arrow',async({page})=>{
+ await mock(page);await page.goto('/info/contact');
+ for(const name of ['Select language','Select country']){const control=page.getByRole('combobox',{name,exact:true});await expect(control).toBeVisible();await control.scrollIntoViewIfNeeded();const sizes=await control.evaluate(el=>({width:el.getBoundingClientRect().width,text:parseFloat(getComputedStyle(el).getPropertyValue('--select-width'))}));expect(sizes.width-sizes.text).toBeGreaterThanOrEqual(26);await control.click();await page.keyboard.press('Escape');await expect(control).toBeFocused();}
+});
+test('picker uses readable dark-theme colors',async({page})=>{
+ await mock(page);await page.goto('/account/support');const control=page.getByRole('combobox',{name:'Support status',exact:true});await expect(control).toBeVisible();await page.evaluate(()=>document.documentElement.dataset.theme='dark');await control.click();expect(await control.evaluate(el=>({bg:getComputedStyle(el,'::picker(select)').backgroundColor,text:getComputedStyle(el,'::picker(select)').color}))).toEqual({bg:'rgb(23, 23, 21)',text:'rgb(242, 240, 233)'});await page.keyboard.press('Escape');
+});
+
+for(const width of [390,768,1440])test(`address modal select keeps one arrow and changes country at ${width}px`,async({page})=>{
+ await mock(page);await page.setViewportSize({width,height:900});await page.goto('/account/profile');await page.getByRole('button',{name:'Add',exact:true}).click();const dialog=page.getByRole('dialog',{name:'Add address',exact:true});const select=dialog.getByRole('combobox',{name:'Country/region',exact:true});await expect(select).toBeVisible();expect(await select.evaluate(el=>getComputedStyle(el,'::picker-icon').display)).toBe('none');await expect(dialog.locator('.acct-selectRow > .acct-chev').first()).toBeVisible();await select.selectOption('US');await expect(select).toHaveValue('US');await select.click();await page.keyboard.press('Escape');await expect(select).toBeFocused();expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1)).toBe(true);await page.keyboard.press('Escape');await expect(dialog).toHaveCount(0);await expect(page.getByRole('button',{name:'Add',exact:true})).toBeFocused();
+});

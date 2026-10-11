@@ -1,0 +1,35 @@
+{
+  "package": "ALTURA-FULL-PROJECT",
+  "createdAt": "2026-10-04T19:44:13.025Z",
+  "sourceManifestSha256": "929fca8b99e28a2d71a3a54801618b19608d7458ceb5ddaf8972dbf00ac3ad41",
+  "databaseBackupSha256": "c0814c7a8869dc525329029d2f2a30ba97863e2f51741c99c823e9a35390a914",
+  "databaseSummary": {
+    "users": 43,
+    "admins": 1,
+    "customers": 42,
+    "products": 27,
+    "activeProducts": 9,
+    "variants": 199,
+    "productImages": 196,
+    "inventory": 199,
+    "orders": 65,
+    "payments": 65,
+    "returns": 11,
+    "discounts": 11,
+    "shippingMethods": 2,
+    "refreshTokens": 0,
+    "cartSessions": 0,
+    "wishlistSessions": 0,
+    "paymentSecrets": 0,
+    "nonSyntheticUsers": 0,
+    "nonSyntheticOrders": 0
+  },
+  "postgresVersion": "17.11",
+  "application": {
+    "frontend": "http://127.0.0.1:3100",
+    "backend": "http://127.0.0.1:4000",
+    "database": "127.0.0.1:5434/altura_friend",
+    "market": "EG/EGP",
+    "paymentMode": "mock"
+  }
+}

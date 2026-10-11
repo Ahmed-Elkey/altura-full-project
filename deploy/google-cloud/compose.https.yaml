@@ -1,0 +1,21 @@
+services:
+  frontend:
+    ports: !reset []
+  gateway:
+    image: caddy:2
+    environment:
+      ALTURA_DOMAIN: ${ALTURA_DOMAIN:?Missing public hostname}
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./deploy/google-cloud/Caddyfile:/etc/caddy/Caddyfile:ro
+      - demo-tls:/data
+      - demo-tls-config:/config
+    depends_on:
+      frontend:
+        condition: service_started
+    restart: unless-stopped
+volumes:
+  demo-tls:
+  demo-tls-config:

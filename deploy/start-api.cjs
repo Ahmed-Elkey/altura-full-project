@@ -1,0 +1,11 @@
+// Dedicated container launcher. No dotenv import and no credentials printed.
+const fs=require('node:fs'),path=require('node:path'),cp=require('node:child_process');const {validateProfile}=require('./demo-bootstrap.cjs');
+async function main(){const cwd=process.cwd(),config=JSON.parse(fs.readFileSync(path.join(process.env.DEMO_SECRET_DIR||'/run/altura','secrets.json'),'utf8'));validateProfile(config);const env={...process.env,...config,NODE_ENV:'production',HOST:'0.0.0.0',PORT:process.env.PORT||'4000',TRUST_PROXY:'1',DEFAULT_COUNTRY:'EG',DEFAULT_CURRENCY:'EGP',FRONTEND_ORIGIN:process.env.FRONTEND_ORIGIN||'http://frontend:3000',SUPPORT_EMAIL_WORKER_ENABLED:'false'};
+ const run=(args,override={})=>{const r=cp.spawnSync(process.execPath,args,{cwd,env:{...env,...override},stdio:['ignore','pipe','pipe']});if(r.status!==0)throw Error('Demo provisioning step failed');};
+ run(['node_modules/prisma/build/index.js','migrate','deploy']);
+ const {PrismaClient}=require(path.join(cwd,'node_modules/@prisma/client'));const prisma=new PrismaClient({datasources:{db:{url:config.DATABASE_URL}}});
+ try{const counts=await Promise.all([prisma.product.count(),prisma.user.count(),prisma.order.count()]);if(counts.every(n=>n===0))run(['dist/prisma/seed.js'],{NODE_ENV:'development'});
+ const {PasswordService}=require(path.join(cwd,'dist/src/common/security/password.service.js'));const passwords=new PasswordService();for(const role of ['CUSTOMER','ADMIN']){const user=await prisma.user.findUnique({where:{email:config[`${role}_SEED_EMAIL`]}});if(!user||user.role!==role||user.status!=='ACTIVE'||!await passwords.verify(config[`${role}_SEED_PASSWORD`],user.passwordHash))throw Error('Demo accounts unavailable; no existing records overwritten');}
+ }finally{await prisma.$disconnect();}
+ console.log('Demo schema, catalog and accounts ready. Starting API.');const child=cp.spawn(process.execPath,['dist/src/main.js'],{cwd,env,stdio:'inherit'});for(const signal of ['SIGTERM','SIGINT'])process.on(signal,()=>child.kill(signal));child.on('exit',(code,signal)=>{process.exitCode=code??(signal?1:0);});child.on('error',()=>{console.error('Demo API could not start');process.exitCode=1;});}
+if(require.main===module)main().catch(()=>{console.error('Hosted demo startup failed. No existing application data was reset.');process.exitCode=1;});module.exports={main};

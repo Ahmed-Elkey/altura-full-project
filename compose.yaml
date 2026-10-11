@@ -1,0 +1,65 @@
+name: altura-demo
+services:
+  initialize:
+    image: node:22-bookworm-slim
+    command: ["node", "/bootstrap/demo-bootstrap.cjs"]
+    environment:
+      COMMERCE_PROXY_KEY_DIR: /run/visitor
+    volumes:
+      - ./deploy/demo-bootstrap.cjs:/bootstrap/demo-bootstrap.cjs:ro
+      - demo-secrets:/run/altura
+      - demo-visitor-key:/run/visitor
+  database:
+    image: postgres:16-bookworm
+    environment:
+      POSTGRES_DB: altura_demo
+      POSTGRES_USER: altura
+      POSTGRES_PASSWORD_FILE: /run/altura/db-password
+    volumes:
+      - demo-database:/var/lib/postgresql/data
+      - demo-secrets:/run/altura:ro
+    depends_on:
+      initialize:
+        condition: service_completed_successfully
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U altura -d altura_demo"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+    restart: unless-stopped
+  backend:
+    build:
+      context: .
+      dockerfile: deploy/Dockerfile.backend
+    volumes:
+      - demo-secrets:/run/altura:ro
+    depends_on:
+      database:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:4000/api/v1/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 5s
+      timeout: 5s
+      retries: 40
+      start_period: 60s
+    restart: unless-stopped
+  frontend:
+    build:
+      context: .
+      dockerfile: deploy/Dockerfile.frontend
+      args:
+        NEXT_PUBLIC_SITE_URL: ${NEXT_PUBLIC_SITE_URL:-}
+    environment:
+      COMMERCE_PROXY_KEY_FILE: /run/visitor/key
+    volumes:
+      - demo-visitor-key:/run/visitor:ro
+    ports:
+      - "${PORT:-3000}:3000"
+    depends_on:
+      backend:
+        condition: service_healthy
+    restart: unless-stopped
+volumes:
+  demo-secrets:
+  demo-database:
+  demo-visitor-key:

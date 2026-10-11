@@ -1,0 +1,2363 @@
+{
+  "source": "ALTURA storefront Step 17 catalog",
+  "activeProductCount": 9,
+  "activeColorwayCount": 21,
+  "imageCount": 196,
+  "categories": [
+    {
+      "name": "Tops",
+      "slug": "tops",
+      "parent": null
+    },
+    {
+      "name": "Bottoms",
+      "slug": "bottoms",
+      "parent": null
+    },
+    {
+      "name": "Accessories",
+      "slug": "accessories",
+      "parent": null
+    },
+    {
+      "name": "Pullovers",
+      "slug": "pullovers",
+      "parent": "tops"
+    },
+    {
+      "name": "Jackets",
+      "slug": "jackets",
+      "parent": "tops"
+    },
+    {
+      "name": "T-Shirts & Longsleeves",
+      "slug": "t-shirts-longsleeves",
+      "parent": "tops"
+    },
+    {
+      "name": "Pants",
+      "slug": "pants",
+      "parent": "bottoms"
+    },
+    {
+      "name": "Tank Tops",
+      "slug": "tank-tops",
+      "parent": "tops"
+    },
+    {
+      "name": "Shorts",
+      "slug": "shorts",
+      "parent": "bottoms"
+    },
+    {
+      "name": "Tights",
+      "slug": "tights",
+      "parent": "bottoms"
+    },
+    {
+      "name": "Headwear",
+      "slug": "headwear",
+      "parent": "accessories"
+    },
+    {
+      "name": "Socks",
+      "slug": "socks",
+      "parent": "accessories"
+    },
+    {
+      "name": "Other",
+      "slug": "other",
+      "parent": "accessories"
+    }
+  ],
+  "collections": [
+    {
+      "name": "Shop All",
+      "slug": "shopall",
+      "description": "The complete ALTURA active catalogue."
+    },
+    {
+      "name": "Fall 26",
+      "slug": "fall-26",
+      "description": "ALTURA Fall 26."
+    },
+    {
+      "name": "Tops",
+      "slug": "tops",
+      "description": "ALTURA tops."
+    },
+    {
+      "name": "Bottoms",
+      "slug": "bottoms",
+      "description": "ALTURA bottoms."
+    },
+    {
+      "name": "Accessories",
+      "slug": "accessories",
+      "description": "ALTURA accessories."
+    },
+    {
+      "name": "T-Shirts",
+      "slug": "t-shirts-longsleeves",
+      "description": "T-shirts and longsleeves."
+    },
+    {
+      "name": "Shorts",
+      "slug": "shorts",
+      "description": "Running shorts."
+    },
+    {
+      "name": "Tights",
+      "slug": "tights",
+      "description": "Running tights."
+    },
+    {
+      "name": "Headwear",
+      "slug": "headwear",
+      "description": "ALTURA headwear."
+    }
+  ],
+  "products": [
+    {
+      "slug": "summit-knit",
+      "status": "DRAFT",
+      "name": "Cedar Knitwear",
+      "price": 185.0,
+      "category": "Tops",
+      "subcategory": "Pullovers",
+      "tone": "forest",
+      "description": "A mid-weight technical knit for cool starts, easy miles and the hours after.",
+      "fit": "Relaxed athletic fit. Take your usual size.",
+      "colors": [
+        "Forest",
+        "Stone"
+      ],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "features": [
+        "Mid-weight performance knit",
+        "Breathable recycled blend",
+        "Ribbed cuffs and hem",
+        "Made for layering"
+      ],
+      "inStock": true,
+      "position": 100,
+      "featured": false,
+      "currency": "EGP",
+      "colorHex": {
+        "Forest": "#26322b",
+        "Stone": "#d7d0c4"
+      },
+      "images": [
+        {
+          "color": "Forest",
+          "view": "front",
+          "url": "/products/summit-knit/forest-front.jpg",
+          "position": 0,
+          "isPrimary": true
+        },
+        {
+          "color": "Forest",
+          "view": "back",
+          "url": "/products/summit-knit/forest-back.jpg",
+          "position": 1,
+          "isPrimary": false
+        },
+        {
+          "color": "Forest",
+          "view": "detail",
+          "url": "/products/summit-knit/forest-detail.jpg",
+          "position": 2,
+          "isPrimary": false
+        },
+        {
+          "color": "Forest",
+          "view": "angled",
+          "url": "/products/summit-knit/forest-angled.jpg",
+          "position": 3,
+          "isPrimary": false
+        },
+        {
+          "color": "Stone",
+          "view": "front",
+          "url": "/products/summit-knit/stone-front.jpg",
+          "position": 0,
+          "isPrimary": true
+        },
+        {
+          "color": "Stone",
+          "view": "back",
+          "url": "/products/summit-knit/stone-back.jpg",
+          "position": 1,
+          "isPrimary": false
+        },
+        {
+          "color": "Stone",
+          "view": "detail",
+          "url": "/products/summit-knit/stone-detail.jpg",
+          "position": 2,
+          "isPrimary": false
+        },
+        {
+          "color": "Stone",
+          "view": "angled",
+          "url": "/products/summit-knit/stone-angled.jpg",
+          "position": 3,
+          "isPrimary": false
+        }
+      ],
+      "collections": [
+        "shopall",
+        "fall-26",
+        "tops"
+      ]
+    },
+    {
+      "slug": "ridge-vest",
+      "status": "DRAFT",
+      "name": "Northcrest Insulated Vest",
+      "price": 220.0,
+      "category": "Tops",
+      "subcategory": "Jackets",
+      "tone": "charcoal",
+      "description": "Light insulation through the core, balanced with stretch where movement needs it.",
+      "fit": "Regular fit with room for a base layer.",
+      "colors": [
+        "Black",
+        "Moss"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "features": [
+        "Lightweight insulated front",
+        "Stretch side panels",
+        "Two-way front zip",
+        "Secure hand pockets"
+      ],
+      "inStock": true,
+      "position": 101,
+      "featured": false,
+      "currency": "EGP",
+      "colorHex": {
+        "Black": "#171817",
+        "Moss": "#586653"
+      },
+      "images": [
+        {
+          "color": "Black",
+          "view": "front",
+          "url": "/products/ridge-vest/black-front.jpg",
+          "position": 0,
+          "isPrimary": true
+        },
+        {
+          "color": "Black",
+          "view": "back",
+          "url": "/products/ridge-vest/black-back.jpg",
+          "position": 1,
+          "isPrimary": false
+        },
+        {
+          "color": "Black",
+          "view": "detail",
+          "url": "/products/ridge-vest/black-detail.jpg",
+          "position": 2,
+          "isPrimary": false
+        },
+        {
+          "color": "Black",
+          "view": "angled",
+          "url": "/products/ridge-vest/black-angled.jpg",
+          "position": 3,
+          "isPrimary": false
+        },
+        {
+          "color": "Moss",
+          "view": "front",
+          "url": "/products/ridge-vest/moss-front.jpg",
+          "position": 0,
+          "isPrimary": true
+        },
+        {
+          "color": "Moss",
+          "view": "back",
+          "url": "/products/ridge-vest/moss-back.jpg",
+          "position": 1,
+          "isPrimary": false
+        },
+        {
+          "color": "Moss",
+          "view": "detail",
+          "url": "/products/ridge-vest/moss-detail.jpg",
+          "position": 2,
+          "isPrimary": false
+        },
+        {
+          "color": "Moss",
+          "view": "angled",
+          "url": "/products/ridge-vest/moss-angled.jpg",
+          "position": 3,
+          "isPrimary": false
+        }
+      ],
+      "collections": [
+        "shopall",
+        "fall-26",
+        "tops"
+      ]
+    },
+    {
+      "slug": "terrain-waffle-ls",
+      "status": "DRAFT",
+      "name": "Vale Waffle Longsleeve",
+      "price": 165.0,
+      "category": "Tops",
+      "subcategory": "T-Shirts & Longsleeves",
+      "tone": "stone",
+      "description": "Textured warmth with an open structure, built to layer without feeling heavy.",
+      "fit": "Close to body without compression.",
+      "colors": [
+        "Stone",
+        "Sage",
+        "Black"
+      ],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L"
+      ],
+      "features": [
+        "Textured waffle jersey",
+        "Moisture-wicking finish",
+        "Flatlock seams",
+        "Thumb-loop cuffs"
+      ],
+      "inStock": true,
+      "position": 102,
+      "featured": false,
+      "currency": "EGP",
+      "colorHex": {
+        "Stone": "#d7d0c4",
+        "Sage": "#8e9483",
+        "Black": "#171817"
+      },
+      "images": [
+        {
+          "color": "Stone",
+          "view": "front",
+          "url": "/products/terrain-waffle-ls/stone-front.jpg",
+          "position": 0,
+          "isPrimary": true
+        },
+        {
+          "color": "Stone",
+          "view": "back",
+          "url": "/products/terrain-waffle-ls/stone-back.jpg",
+          "position": 1,
+          "isPrimary": false
+        },
+        {
+          "color": "Stone",
+          "view": "detail",
+          "url": "/products/terrain-waffle-ls/stone-detail.jpg",
+          "position": 2,
+          "isPrimary": false
+        },
+        {
+          "color": "Stone",
+          "view": "angled",
+          "url": "/products/terrain-waffle-ls/stone-angled.jpg",
+          "position": 3,
+          "isPrimary": false
+        },
+        {
+          "color": "Sage",
+          "view": "front",
+          "url": "/products/terrain-waffle-ls/sage-front.jpg",
+          "position": 0,
+          "isPrimary": true
+        },
+        {
+          "color": "Sage",
+          "view": "back",
+          "url": "/products/terrain-waffle-ls/sage-back.jpg",
+          "position": 1,
+          "isPrimary": false
+        },
+        {
+          "color": "Sage",
+          "view": "detail",
+          "url": "/products/terrain-waffle-ls/sage-detail.jpg",
+          "position": 2,
+          "isPrimary": false
+        },
+        {
+          "color": "Sage",
+          "view": "angled",
+          "url": "/products/terrain-waffle-ls/sage-angled.jpg",
+          "position": 3,
+          "isPrimary": false
+        },
+        {
+          "color": "Black",
+          "view": "front",
+          "url": "/products/terrain-waffle-ls/black-front.jpg",
+          "position": 0,
+          "isPrimary": true
+        },
+        {
+          "color": "Black",
+          "view": "back",
+          "url": "/products/terrain-waffle-ls/black-back.jpg",
+          "position": 1,
+          "isPrimary": false
+        },
+        {
+          "color": "Black",
+          "view": "detail",
+          "url": "/products/terrain-waffle-ls/black-detail.jpg",
+          "position": 2,
+          "isPrimary": false
+        },
+        {
+          "color": "Black",
+          "view": "angled",
+          "url": "/products/terrain-waffle-ls/black-angled.jpg",
+          "position": 3,
+          "isPrimary": false
+        }
+      ],
+      "collections": [
+        "shopall",
+        "fall-26",
+        "tops",
+        "t-shirts-longsleeves"
+      ]
+    },
+    {
+      "slug": "altitude-quarter-zip",
+      "status": "DRAFT",
+      "name": "Palisade 1/4 Zip",
+      "price": 170.0,
+      "category": "Tops",
+      "subcategory": "Pullovers",
+      "tone": "sage",
+      "description": "A clean mid-layer for shifting temperatures, finished with a low-profile quarter zip.",
+      "fit": "Regular athletic fit.",
+      "colors": [
+        "Sage",
+        "Forest",
+        "Bone"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "features": [
+        "Brushed interior",
+        "Stand collar",
+        "Low-profile zip",
+        "Quick-dry fabric"
+      ],
+      "inStock": true,
+      "position": 103,
+      "featured": false,
+      "currency": "EGP",
+      "colorHex": {
+        "Sage": "#8e9483",
+        "Forest": "#26322b",
+        "Bone": "#eee9de"
+      },
+      "images": [
+        {
+          "color": "Sage",
+          "view": "front",
+          "url": "/products/altitude-quarter-zip/sage-front.jpg",
+          "position": 0,
+          "isPrimary": true
+        },
+        {
+          "color": "Sage",
+          "view": "back",
+          "url": "/products/altitude-quarter-zip/sage-back.jpg",
+          "position": 1,
+          "isPrimary": false
+        },
+        {
+          "color": "Sage",
+          "view": "detail",
+          "url": "/products/altitude-quarter-zip/sage-detail.jpg",
+          "position": 2,
+          "isPrimary": false
+        },
+        {
+          "color": "Sage",
+          "view": "angled",
+          "url": "/products/altitude-quarter-zip/sage-angled.jpg",
+          "position": 3,
+          "isPrimary": false
+        },
+        {
+          "color": "Forest",
+          "view": "front",
+          "url": "/products/altitude-quarter-zip/forest-front.jpg",
+          "position": 0,
+          "isPrimary": true
+        },
+        {
+          "color": "Forest",
+          "view": "back",
+          "url": "/products/altitude-quarter-zip/forest-back.jpg",
+          "position": 1,
+          "isPrimary": false
+        },
+        {
+          "color": "Forest",
+          "view": "detail",
+          "url": "/products/altitude-quarter-zip/forest-detail.jpg",
+          "position": 2,
+          "isPrimary": false
+        },
+        {
+          "color": "Forest",
+          "view": "angled",
+          "url": "/products/altitude-quarter-zip/forest-angled.jpg",
+          "position": 3,
+          "isPrimary": false
+        },
+        {
+          "color": "Bone",
+          "view": "front",
+          "url": "/products/altitude-quarter-zip/bone-front.jpg",
+          "position": 0,
+          "isPrimary": true
+        },
+        {
+          "color": "Bone",
+          "view": "back",
+          "url": "/products/altitude-quarter-zip/bone-back.jpg",
+          "position": 1,
+          "isPrimary": false
+        },
+        {
+          "color": "Bone",
+          "view": "detail",
+          "url": "/products/altitude-quarter-zip/bone-detail.jpg",
+          "position": 2,
+          "isPrimary": false
+        },
+        {
+          "color": "Bone",
+          "view": "angled",
+          "url": "/products/altitude-quarter-zip/bone-angled.jpg",
+          "position": 3,
+          "isPrimary": false
+        }
+      ],
+      "collections": [
+        "shopall",
+        "fall-26",
+        "tops"
+      ]
+    },
+    {
+      "slug": "field-sherpa",
+      "status": "DRAFT",
+      "name": "Cairn Sherpa",
+      "price": 200.0,
+      "category": "Tops",
+      "subcategory": "Jackets",
+      "tone": "sand",
+      "description": "High-pile warmth cut with a simple shape for colder days on and off the trail.",
+      "fit": "Relaxed fit.",
+      "colors": [
+        "Sand",
+        "Forest"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "features": [
+        "High-pile fleece",
+        "Woven chest pocket",
+        "Elasticated cuffs",
+        "Full front zip"
+      ],
+      "inStock": false,
+      "position": 104,
+      "featured": false,
+      "currency": "EGP",
+      "colorHex": {
+        "Sand": "#bbae96",
+        "Forest": "#26322b"
+      },
+      "images": [
+        {
+          "color": "Sand",
+          "view": "front",
+          "url": "/products/field-sherpa/sand-front.jpg",
+          "position": 0,
+          "isPrimary": true
+        },
+        {
+          "color": "Sand",
+          "view": "back",
+          "url": "/products/field-sherpa/sand-back.jpg",
+          "position": 1,
+          "isPrimary": false
+        },
+        {
+          "color": "Sand",
+          "view": "detail",
+          "url": "/products/field-sherpa/sand-detail.jpg",
+          "position": 2,
+          "isPrimary": false
+        },
+        {
+          "color": "Sand",
+          "view": "angled",
+          "url": "/products/field-sherpa/sand-angled.jpg",
+          "position": 3,
+          "isPrimary": false
+        },
+        {
+          "color": "Forest",
+          "view": "front",
+          "url": "/products/field-sherpa/forest-front.jpg",
+          "position": 0,
+          "isPrimary": true
+        },
+        {
+          "color": "Forest",
+          "view": "back",
+          "url": "/products/field-sherpa/forest-back.jpg",
+          "position": 1,
+          "isPrimary": false
+        },
+        {
+          "color": "Forest",
+          "view": "detail",
+          "url": "/products/field-sherpa/forest-detail.jpg",
+          "position": 2,
+          "isPrimary": false
+        },
+        {
+          "color": "Forest",
+          "view": "angled",
+          "url": "/products/field-sherpa/forest-angled.jpg",
+          "position": 3,
+          "isPrimary": false
+        }
+      ],
+      "collections": [
+        "shopall",
+        "fall-26",
+        "tops"
+      ]
+    },
+    {
+      "slug": "club-crewneck",
+      "status": "DRAFT",
+      "name": "Foundry Crewneck",
+      "price": 170.0,
+      "category": "Tops",
+      "subcategory": "Pullovers",
+      "tone": "ice",
+      "description": "A substantial loopback crew made for recovery days, travel and everyday rotation.",
+      "fit": "Relaxed unisex fit.",
+      "colors": [
+        "Ice",
+        "Forest",
+        "Black"
+      ],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "features": [
+        "Heavy loopback cotton",
+        "Garment washed",
+        "Ribbed trim",
+        "Subtle ALTURA mark"
+      ],
+      "inStock": true,
+      "position": 105,
+      "featured": false,
+      "currency": "EGP",
+      "colorHex": {
+        "Ice": "#e3e5df",
+        "Forest": "#26322b",
+        "Black": "#171817"
+      },
+      "images": [
+        {
+          "color": "Ice",
+          "view": "front",
+          "url": "/products/club-crewneck/ice-front.jpg",
+          "position": 0,
+          "isPrimary": true
+        },
+        {
+          "color": "Ice",
+          "view": "back",
+          "url": "/products/club-crewneck/ice-back.jpg",
+          "position": 1,
+          "isPrimary": false
+        },
+        {
+          "color": "Ice",
+          "view": "detail",
+          "url": "/products/club-crewneck/ice-detail.jpg",
+          "position": 2,
+          "isPrimary": false
+        },
+        {
+          "color": "Ice",
+          "view": "angled",
+          "url": "/products/club-crewneck/ice-angled.jpg",
+          "position": 3,
+          "isPrimary": false
+        },
+        {
+          "color": "Forest",
+          "view": "front",
+          "url": "/products/club-crewneck/forest-front.jpg",
+          "position": 0,
+          "isPrimary": true
+        },
+        {
+          "color": "Forest",
+          "view": "back",
+          "url": "/products/club-crewneck/forest-back.jpg",
+          "position": 1,
+          "isPrimary": false
+        },
+        {
+          "color": "Forest",
+          "view": "detail",
+          "url": "/products/club-crewneck/forest-detail.jpg",
+          "position": 2,
+          "isPrimary": false
+        },
+        {
+          "color": "Forest",
+          "view": "angled",
+          "url": "/products/club-crewneck/forest-angled.jpg",
+          "position": 3,
+          "isPrimary": false
+        },
+        {
+          "color": "Black",
+          "view": "front",
+          "url": "/products/club-crewneck/black-front.jpg",
+          "position": 0,
+          "isPrimary": true
+        },
+        {
+          "color": "Black",
+          "view": "back",
+          "url": "/products/club-crewneck/black-back.jpg",
+          "position": 1,
+          "isPrimary": false
+        },
+        {
+          "color": "Black",
+          "view": "detail",
+          "url": "/products/club-crewneck/black-detail.jpg",
+          "position": 2,
+          "isPrimary": false
+        },
+        {
+          "color": "Black",
+          "view": "angled",
+          "url": "/products/club-crewneck/black-angled.jpg",
+          "position": 3,
+          "isPrimary": false
+        }
+      ],
+      "collections": [
+        "shopall",
+        "fall-26",
+        "tops"
+      ]
+    },
+    {
+      "slug": "motion-joggers",
+      "status": "DRAFT",
+      "name": "Switchback Joggers",
+      "price": 170.0,
+      "category": "Bottoms",
+      "subcategory": "Pants",
+      "tone": "charcoal",
+      "description": "Tapered technical joggers with quiet stretch and an easy transition from warm-up to travel.",
+      "fit": "Tapered athletic fit.",
+      "colors": [
+        "Charcoal",
+        "Forest"
+      ],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "features": [
+        "Four-way stretch",
+        "Elastic waist",
+        "Zipped side pocket",
+        "Tapered ankle"
+      ],
+      "inStock": true,
+      "position": 106,
+      "featured": false,
+      "currency": "EGP",
+      "colorHex": {
+        "Charcoal": "#454946",
+        "Forest": "#26322b"
+      },
+      "images": [
+        {
+          "color": "Charcoal",
+          "view": "front",
+          "url": "/products/motion-joggers/charcoal-front.jpg",
+          "position": 0,
+          "isPrimary": true
+        },
+        {
+          "color": "Charcoal",
+          "view": "back",
+          "url": "/products/motion-joggers/charcoal-back.jpg",
+          "position": 1,
+          "isPrimary": false
+        },
+        {
+          "color": "Charcoal",
+          "view": "detail",
+          "url": "/products/motion-joggers/charcoal-detail.jpg",
+          "position": 2,
+          "isPrimary": false
+        },
+        {
+          "color": "Charcoal",
+          "view": "angled",
+          "url": "/products/motion-joggers/charcoal-angled.jpg",
+          "position": 3,
+          "isPrimary": false
+        },
+        {
+          "color": "Forest",
+          "view": "front",
+          "url": "/products/motion-joggers/forest-front.jpg",
+          "position": 0,
+          "isPrimary": true
+        },
+        {
+          "color": "Forest",
+          "view": "back",
+          "url": "/products/motion-joggers/forest-back.jpg",
+          "position": 1,
+          "isPrimary": false
+        },
+        {
+          "color": "Forest",
+          "view": "detail",
+          "url": "/products/motion-joggers/forest-detail.jpg",
+          "position": 2,
+          "isPrimary": false
+        },
+        {
+          "color": "Forest",
+          "view": "angled",
+          "url": "/products/motion-joggers/forest-angled.jpg",
+          "position": 3,
+          "isPrimary": false
+        }
+      ],
+      "collections": [
+        "shopall",
+        "fall-26",
+        "bottoms"
+      ]
+    },
+    {
+      "slug": "pace-running-pants",
+      "status": "DRAFT",
+      "name": "Traverse Running Pants",
+      "price": 175.0,
+      "category": "Bottoms",
+      "subcategory": "Pants",
+      "tone": "forest",
+      "description": "Wind-resistant running pants reduced to the essentials for cooler, unsettled conditions.",
+      "fit": "Slim running fit.",
+      "colors": [
+        "Black",
+        "Slate",
+        "Forest"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "features": [
+        "Wind-resistant shell",
+        "Rear ventilation",
+        "Internal drawcord",
+        "Reflective detail"
+      ],
+      "inStock": true,
+      "position": 107,
+      "featured": false,
+      "currency": "EGP",
+      "colorHex": {
+        "Black": "#171817",
+        "Slate": "#65706d",
+        "Forest": "#26322b"
+      },
+      "images": [
+        {
+          "color": "Black",
+          "view": "front",
+          "url": "/products/pace-running-pants/black-front.jpg",
+          "position": 0,
+          "isPrimary": true
+        },
+        {
+          "color": "Black",
+          "view": "back",
+          "url": "/products/pace-running-pants/black-back.jpg",
+          "position": 1,
+          "isPrimary": false
+        },
+        {
+          "color": "Black",
+          "view": "detail",
+          "url": "/products/pace-running-pants/black-detail.jpg",
+          "position": 2,
+          "isPrimary": false
+        },
+        {
+          "color": "Black",
+          "view": "angled",
+          "url": "/products/pace-running-pants/black-angled.jpg",
+          "position": 3,
+          "isPrimary": false
+        },
+        {
+          "color": "Slate",
+          "view": "front",
+          "url": "/products/pace-running-pants/slate-front.jpg",
+          "position": 0,
+          "isPrimary": true
+        },
+        {
+          "color": "Slate",
+          "view": "back",
+          "url": "/products/pace-running-pants/slate-back.jpg",
+          "position": 1,
+          "isPrimary": false
+        },
+        {
+          "color": "Slate",
+          "view": "detail",
+          "url": "/products/pace-running-pants/slate-detail.jpg",
+          "position": 2,
+          "isPrimary": false
+        },
+        {
+          "color": "Slate",
+          "view": "angled",
+          "url": "/products/pace-running-pants/slate-angled.jpg",
+          "position": 3,
+          "isPrimary": false
+        },
+        {
+          "color": "Forest",
+          "view": "front",
+          "url": "/products/pace-running-pants/forest-front.jpg",
+          "position": 0,
+          "isPrimary": true
+        },
+        {
+          "color": "Forest",
+          "view": "back",
+          "url": "/products/pace-running-pants/forest-back.jpg",
+          "position": 1,
+          "isPrimary": false
+        },
+        {
+          "color": "Forest",
+          "view": "detail",
+          "url": "/products/pace-running-pants/forest-detail.jpg",
+          "position": 2,
+          "isPrimary": false
+        },
+        {
+          "color": "Forest",
+          "view": "angled",
+          "url": "/products/pace-running-pants/forest-angled.jpg",
+          "position": 3,
+          "isPrimary": false
+        }
+      ],
+      "collections": [
+        "shopall",
+        "fall-26",
+        "bottoms"
+      ]
+    },
+    {
+      "slug": "race-tank",
+      "status": "DRAFT",
+      "name": "Crest Tank Top",
+      "price": 110.0,
+      "category": "Tops",
+      "subcategory": "Tank Tops",
+      "tone": "stone",
+      "description": "An ultralight race top with bonded edges and a barely-there feel.",
+      "fit": "Race fit. Size up for a relaxed feel.",
+      "colors": [
+        "Stone",
+        "Black",
+        "Forest"
+      ],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L"
+      ],
+      "features": [
+        "Ultra-light mesh",
+        "Bonded armholes",
+        "Fast-dry finish",
+        "Minimal seams"
+      ],
+      "inStock": true,
+      "position": 108,
+      "featured": false,
+      "currency": "EGP",
+      "colorHex": {
+        "Stone": "#d7d0c4",
+        "Black": "#171817",
+        "Forest": "#26322b"
+      },
+      "images": [
+        {
+          "color": "Stone",
+          "view": "front",
+          "url": "/products/race-tank/stone-front.jpg",
+          "position": 0,
+          "isPrimary": true
+        },
+        {
+          "color": "Stone",
+          "view": "back",
+          "url": "/products/race-tank/stone-back.jpg",
+          "position": 1,
+          "isPrimary": false
+        },
+        {
+          "color": "Stone",
+          "view": "detail",
+          "url": "/products/race-tank/stone-detail.jpg",
+          "position": 2,
+          "isPrimary": false
+        },
+        {
+          "color": "Stone",
+          "view": "angled",
+          "url": "/products/race-tank/stone-angled.jpg",
+          "position": 3,
+          "isPrimary": false
+        },
+        {
+          "color": "Black",
+          "view": "front",
+          "url": "/products/race-tank/black-front.jpg",
+          "position": 0,
+          "isPrimary": true
+        },
+        {
+          "color": "Black",
+          "view": "back",
+          "url": "/products/race-tank/black-back.jpg",
+          "position": 1,
+          "isPrimary": false
+        },
+        {
+          "color": "Black",
+          "view": "detail",
+          "url": "/products/race-tank/black-detail.jpg",
+          "position": 2,
+          "isPrimary": false
+        },
+        {
+          "color": "Black",
+          "view": "angled",
+          "url": "/products/race-tank/black-angled.jpg",
+          "position": 3,
+          "isPrimary": false
+        },
+        {
+          "color": "Forest",
+          "view": "front",
+          "url": "/products/race-tank/forest-front.jpg",
+          "position": 0,
+          "isPrimary": true
+        },
+        {
+          "color": "Forest",
+          "view": "back",
+          "url": "/products/race-tank/forest-back.jpg",
+          "position": 1,
+          "isPrimary": false
+        },
+        {
+          "color": "Forest",
+          "view": "detail",
+          "url": "/products/race-tank/forest-detail.jpg",
+          "position": 2,
+          "isPrimary": false
+        },
+        {
+          "color": "Forest",
+          "view": "angled",
+          "url": "/products/race-tank/forest-angled.jpg",
+          "position": 3,
+          "isPrimary": false
+        }
+      ],
+      "collections": [
+        "shopall",
+        "fall-26",
+        "tops"
+      ]
+    },
+    {
+      "slug": "summit-shorts",
+      "status": "ACTIVE",
+      "name": "Summit Running Shorts",
+      "price": 118.0,
+      "category": "Bottoms",
+      "subcategory": "Shorts",
+      "tone": "charcoal",
+      "description": "Light running shorts with a clean split hem, secure storage and a quiet finish.",
+      "fit": "Regular running fit with room through the stride.",
+      "colors": [
+        "Black",
+        "Stone",
+        "Sage"
+      ],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "features": [
+        "Lightweight woven shell",
+        "Internal brief",
+        "Rear zip pocket",
+        "Split side hem"
+      ],
+      "inStock": true,
+      "position": 8,
+      "featured": true,
+      "currency": "EGP",
+      "colorHex": {
+        "Black": "#171817",
+        "Stone": "#d7d0c4",
+        "Sage": "#8e9483"
+      },
+      "images": [
+        {
+          "color": "Black",
+          "view": "front",
+          "url": "/products/summit-shorts/black-front.jpg",
+          "position": 0,
+          "isPrimary": true
+        },
+        {
+          "color": "Black",
+          "view": "back",
+          "url": "/products/summit-shorts/black-back.jpg",
+          "position": 1,
+          "isPrimary": false
+        },
+        {
+          "color": "Black",
+          "view": "detail",
+          "url": "/products/summit-shorts/black-detail.jpg",
+          "position": 2,
+          "isPrimary": false
+        },
+        {
+          "color": "Black",
+          "view": "angled",
+          "url": "/products/summit-shorts/black-angled.jpg",
+          "position": 3,
+          "isPrimary": false
+        },
+        {
+          "color": "Stone",
+          "view": "front",
+          "url": "/products/summit-shorts/stone-front.jpg",
+          "position": 0,
+          "isPrimary": true
+        },
+        {
+          "color": "Stone",
+          "view": "back",
+          "url": "/products/summit-shorts/stone-back.jpg",
+          "position": 1,
+          "isPrimary": false
+        },
+        {
+          "color": "Stone",
+          "view": "detail",
+          "url": "/products/summit-shorts/stone-detail.jpg",
+          "position": 2,
+          "isPrimary": false
+        },
+        {
+          "color": "Stone",
+          "view": "angled",
+          "url": "/products/summit-shorts/stone-angled.jpg",
+          "position": 3,
+          "isPrimary": false
+        },
+        {
+          "color": "Sage",
+          "view": "front",
+          "url": "/products/summit-shorts/sage-front.jpg",
+          "position": 0,
+          "isPrimary": true
+        },
+        {
+          "color": "Sage",
+          "view": "back",
+          "url": "/products/summit-shorts/sage-back.jpg",
+          "position": 1,
+          "isPrimary": false
+        },
+        {
+          "color": "Sage",
+          "view": "detail",
+          "url": "/products/summit-shorts/sage-detail.jpg",
+          "position": 2,
+          "isPrimary": false
+        },
+        {
+          "color": "Sage",
+          "view": "angled",
+          "url": "/products/summit-shorts/sage-angled.jpg",
+          "position": 3,
+          "isPrimary": false
+        }
+      ],
+      "collections": [
+        "shopall",
+        "fall-26",
+        "bottoms",
+        "shorts"
+      ]
+    },
+    {
+      "slug": "trail-shorts",
+      "status": "ACTIVE",
+      "name": "Trail Running Shorts",
+      "price": 125.0,
+      "category": "Bottoms",
+      "subcategory": "Shorts",
+      "tone": "forest",
+      "description": "A slightly longer trail short with light structure and enough storage for longer days out.",
+      "fit": "Regular fit. Designed to sit just above the knee.",
+      "colors": [
+        "Forest",
+        "Black"
+      ],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "features": [
+        "Four-way stretch shell",
+        "Internal drawcord",
+        "Dual gel pockets",
+        "Quick-dry finish"
+      ],
+      "inStock": true,
+      "position": 9,
+      "featured": false,
+      "currency": "EGP",
+      "colorHex": {
+        "Forest": "#26322b",
+        "Black": "#171817"
+      },
+      "images": [
+        {
+          "color": "Forest",
+          "view": "front",
+          "url": "/products/trail-shorts/forest-front.jpg",
+          "position": 0,
+          "isPrimary": true
+        },
+        {
+          "color": "Forest",
+          "view": "back",
+          "url": "/products/trail-shorts/forest-back.jpg",
+          "position": 1,
+          "isPrimary": false
+        },
+        {
+          "color": "Forest",
+          "view": "detail",
+          "url": "/products/trail-shorts/forest-detail.jpg",
+          "position": 2,
+          "isPrimary": false
+        },
+        {
+          "color": "Forest",
+          "view": "angled",
+          "url": "/products/trail-shorts/forest-angled.jpg",
+          "position": 3,
+          "isPrimary": false
+        },
+        {
+          "color": "Black",
+          "view": "front",
+          "url": "/products/trail-shorts/black-front.jpg",
+          "position": 0,
+          "isPrimary": true
+        },
+        {
+          "color": "Black",
+          "view": "back",
+          "url": "/products/trail-shorts/black-back.jpg",
+          "position": 1,
+          "isPrimary": false
+        },
+        {
+          "color": "Black",
+          "view": "detail",
+          "url": "/products/trail-shorts/black-detail.jpg",
+          "position": 2,
+          "isPrimary": false
+        },
+        {
+          "color": "Black",
+          "view": "angled",
+          "url": "/products/trail-shorts/black-angled.jpg",
+          "position": 3,
+          "isPrimary": false
+        }
+      ],
+      "collections": [
+        "shopall",
+        "fall-26",
+        "bottoms",
+        "shorts"
+      ]
+    },
+    {
+      "slug": "half-tights",
+      "status": "ACTIVE",
+      "name": "Ridgeline Half Tights",
+      "price": 145.0,
+      "category": "Bottoms",
+      "subcategory": "Tights",
+      "tone": "charcoal",
+      "description": "Supportive half tights with low-profile storage for long sessions and race day.",
+      "fit": "Compression fit.",
+      "colors": [
+        "Black",
+        "Forest"
+      ],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "features": [
+        "Supportive stretch knit",
+        "Phone pocket",
+        "Gel pockets",
+        "Bonded hems"
+      ],
+      "inStock": true,
+      "position": 6,
+      "featured": true,
+      "currency": "EGP",
+      "colorHex": {
+        "Black": "#171817",
+        "Forest": "#26322b"
+      },
+      "images": [
+        {
+          "color": "Black",
+          "view": "front",
+          "url": "/products/half-tights/black-front.jpg",
+          "position": 0,
+          "isPrimary": true
+        },
+        {
+          "color": "Black",
+          "view": "back",
+          "url": "/products/half-tights/black-back.jpg",
+          "position": 1,
+          "isPrimary": false
+        },
+        {
+          "color": "Black",
+          "view": "detail",
+          "url": "/products/half-tights/black-detail.jpg",
+          "position": 2,
+          "isPrimary": false
+        },
+        {
+          "color": "Black",
+          "view": "angled",
+          "url": "/products/half-tights/black-angled.jpg",
+          "position": 3,
+          "isPrimary": false
+        },
+        {
+          "color": "Forest",
+          "view": "front",
+          "url": "/products/half-tights/forest-front.jpg",
+          "position": 0,
+          "isPrimary": true
+        },
+        {
+          "color": "Forest",
+          "view": "back",
+          "url": "/products/half-tights/forest-back.jpg",
+          "position": 1,
+          "isPrimary": false
+        },
+        {
+          "color": "Forest",
+          "view": "detail",
+          "url": "/products/half-tights/forest-detail.jpg",
+          "position": 2,
+          "isPrimary": false
+        },
+        {
+          "color": "Forest",
+          "view": "angled",
+          "url": "/products/half-tights/forest-angled.jpg",
+          "position": 3,
+          "isPrimary": false
+        }
+      ],
+      "collections": [
+        "shopall",
+        "fall-26",
+        "bottoms",
+        "tights"
+      ]
+    },
+    {
+      "slug": "trail-cap",
+      "status": "ACTIVE",
+      "name": "Contour 5-Panel Hat",
+      "price": 75.0,
+      "category": "Accessories",
+      "subcategory": "Headwear",
+      "tone": "sage",
+      "description": "A packable five-panel built for high-output days and the miles around them.",
+      "fit": "One size, adjustable.",
+      "colors": [
+        "Sage",
+        "Black",
+        "Stone",
+        "Forest"
+      ],
+      "sizes": [
+        "OS"
+      ],
+      "features": [
+        "Quick-dry shell",
+        "Laser-cut ventilation",
+        "Adjustable rear strap",
+        "Soft packable brim"
+      ],
+      "inStock": true,
+      "position": 5,
+      "featured": true,
+      "currency": "EGP",
+      "colorHex": {
+        "Sage": "#8e9483",
+        "Black": "#171817",
+        "Stone": "#d7d0c4",
+        "Forest": "#26322b"
+      },
+      "images": [
+        {
+          "color": "Sage",
+          "view": "front",
+          "url": "/products/trail-cap/sage-front.jpg",
+          "position": 0,
+          "isPrimary": true
+        },
+        {
+          "color": "Sage",
+          "view": "back",
+          "url": "/products/trail-cap/sage-back.jpg",
+          "position": 1,
+          "isPrimary": false
+        },
+        {
+          "color": "Sage",
+          "view": "detail",
+          "url": "/products/trail-cap/sage-detail.jpg",
+          "position": 2,
+          "isPrimary": false
+        },
+        {
+          "color": "Sage",
+          "view": "angled",
+          "url": "/products/trail-cap/sage-angled.jpg",
+          "position": 3,
+          "isPrimary": false
+        },
+        {
+          "color": "Black",
+          "view": "front",
+          "url": "/products/trail-cap/black-front.jpg",
+          "position": 0,
+          "isPrimary": true
+        },
+        {
+          "color": "Black",
+          "view": "back",
+          "url": "/products/trail-cap/black-back.jpg",
+          "position": 1,
+          "isPrimary": false
+        },
+        {
+          "color": "Black",
+          "view": "detail",
+          "url": "/products/trail-cap/black-detail.jpg",
+          "position": 2,
+          "isPrimary": false
+        },
+        {
+          "color": "Black",
+          "view": "angled",
+          "url": "/products/trail-cap/black-angled.jpg",
+          "position": 3,
+          "isPrimary": false
+        },
+        {
+          "color": "Stone",
+          "view": "front",
+          "url": "/products/trail-cap/stone-front.jpg",
+          "position": 0,
+          "isPrimary": true
+        },
+        {
+          "color": "Stone",
+          "view": "back",
+          "url": "/products/trail-cap/stone-back.jpg",
+          "position": 1,
+          "isPrimary": false
+        },
+        {
+          "color": "Stone",
+          "view": "detail",
+          "url": "/products/trail-cap/stone-detail.jpg",
+          "position": 2,
+          "isPrimary": false
+        },
+        {
+          "color": "Stone",
+          "view": "angled",
+          "url": "/products/trail-cap/stone-angled.jpg",
+          "position": 3,
+          "isPrimary": false
+        },
+        {
+          "color": "Forest",
+          "view": "front",
+          "url": "/products/trail-cap/forest-front.jpg",
+          "position": 0,
+          "isPrimary": true
+        },
+        {
+          "color": "Forest",
+          "view": "back",
+          "url": "/products/trail-cap/forest-back.jpg",
+          "position": 1,
+          "isPrimary": false
+        },
+        {
+          "color": "Forest",
+          "view": "detail",
+          "url": "/products/trail-cap/forest-detail.jpg",
+          "position": 2,
+          "isPrimary": false
+        },
+        {
+          "color": "Forest",
+          "view": "angled",
+          "url": "/products/trail-cap/forest-angled.jpg",
+          "position": 3,
+          "isPrimary": false
+        }
+      ],
+      "collections": [
+        "shopall",
+        "fall-26",
+        "accessories",
+        "headwear"
+      ]
+    },
+    {
+      "slug": "merino-socks",
+      "status": "DRAFT",
+      "name": "Merino Running Socks",
+      "price": 30.0,
+      "category": "Accessories",
+      "subcategory": "Socks",
+      "tone": "ice",
+      "description": "A temperature-regulating merino blend with mesh ventilation and support where it matters.",
+      "fit": "S-M fits EU 36–41. L-XL fits EU 42–47.",
+      "colors": [
+        "Stone",
+        "Black",
+        "Forest"
+      ],
+      "sizes": [
+        "S-M",
+        "L-XL"
+      ],
+      "features": [
+        "Merino blend",
+        "Mesh instep",
+        "Arch support",
+        "Reinforced heel and toe"
+      ],
+      "inStock": true,
+      "position": 113,
+      "featured": false,
+      "currency": "EGP",
+      "colorHex": {
+        "Stone": "#d7d0c4",
+        "Black": "#171817",
+        "Forest": "#26322b"
+      },
+      "images": [
+        {
+          "color": "Stone",
+          "view": "front",
+          "url": "/products/merino-socks/stone-front.jpg",
+          "position": 0,
+          "isPrimary": true
+        },
+        {
+          "color": "Stone",
+          "view": "back",
+          "url": "/products/merino-socks/stone-back.jpg",
+          "position": 1,
+          "isPrimary": false
+        },
+        {
+          "color": "Stone",
+          "view": "detail",
+          "url": "/products/merino-socks/stone-detail.jpg",
+          "position": 2,
+          "isPrimary": false
+        },
+        {
+          "color": "Stone",
+          "view": "angled",
+          "url": "/products/merino-socks/stone-angled.jpg",
+          "position": 3,
+          "isPrimary": false
+        },
+        {
+          "color": "Black",
+          "view": "front",
+          "url": "/products/merino-socks/black-front.jpg",
+          "position": 0,
+          "isPrimary": true
+        },
+        {
+          "color": "Black",
+          "view": "back",
+          "url": "/products/merino-socks/black-back.jpg",
+          "position": 1,
+          "isPrimary": false
+        },
+        {
+          "color": "Black",
+          "view": "detail",
+          "url": "/products/merino-socks/black-detail.jpg",
+          "position": 2,
+          "isPrimary": false
+        },
+        {
+          "color": "Black",
+          "view": "angled",
+          "url": "/products/merino-socks/black-angled.jpg",
+          "position": 3,
+          "isPrimary": false
+        },
+        {
+          "color": "Forest",
+          "view": "front",
+          "url": "/products/merino-socks/forest-front.jpg",
+          "position": 0,
+          "isPrimary": true
+        },
+        {
+          "color": "Forest",
+          "view": "back",
+          "url": "/products/merino-socks/forest-back.jpg",
+          "position": 1,
+          "isPrimary": false
+        },
+        {
+          "color": "Forest",
+          "view": "detail",
+          "url": "/products/merino-socks/forest-detail.jpg",
+          "position": 2,
+          "isPrimary": false
+        },
+        {
+          "color": "Forest",
+          "view": "angled",
+          "url": "/products/merino-socks/forest-angled.jpg",
+          "position": 3,
+          "isPrimary": false
+        }
+      ],
+      "collections": [
+        "shopall",
+        "fall-26",
+        "accessories"
+      ]
+    },
+    {
+      "slug": "meridian-tee",
+      "status": "ACTIVE",
+      "name": "Meridian T-Shirt",
+      "price": 82.0,
+      "category": "Tops",
+      "subcategory": "T-Shirts & Longsleeves",
+      "tone": "ice",
+      "description": "Heavyweight cotton with a dry hand, relaxed structure and a quiet ALTURA mark.",
+      "fit": "Relaxed fit with a slightly dropped shoulder.",
+      "colors": [
+        "Bone",
+        "Forest"
+      ],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "features": [
+        "Heavyweight cotton jersey",
+        "Garment washed",
+        "Bound neck",
+        "Screen-printed mark"
+      ],
+      "inStock": true,
+      "position": 1,
+      "featured": true,
+      "currency": "EGP",
+      "colorHex": {
+        "Bone": "#eee9de",
+        "Forest": "#26322b"
+      },
+      "images": [
+        {
+          "color": "Bone",
+          "view": "front",
+          "url": "/products/meridian-tee/bone-front.jpg",
+          "position": 0,
+          "isPrimary": true
+        },
+        {
+          "color": "Bone",
+          "view": "back",
+          "url": "/products/meridian-tee/bone-back.jpg",
+          "position": 1,
+          "isPrimary": false
+        },
+        {
+          "color": "Bone",
+          "view": "detail",
+          "url": "/products/meridian-tee/bone-detail.jpg",
+          "position": 2,
+          "isPrimary": false
+        },
+        {
+          "color": "Bone",
+          "view": "angled",
+          "url": "/products/meridian-tee/bone-angled.jpg",
+          "position": 3,
+          "isPrimary": false
+        },
+        {
+          "color": "Forest",
+          "view": "front",
+          "url": "/products/meridian-tee/forest-front.jpg",
+          "position": 0,
+          "isPrimary": true
+        },
+        {
+          "color": "Forest",
+          "view": "back",
+          "url": "/products/meridian-tee/forest-back.jpg",
+          "position": 1,
+          "isPrimary": false
+        },
+        {
+          "color": "Forest",
+          "view": "detail",
+          "url": "/products/meridian-tee/forest-detail.jpg",
+          "position": 2,
+          "isPrimary": false
+        },
+        {
+          "color": "Forest",
+          "view": "angled",
+          "url": "/products/meridian-tee/forest-angled.jpg",
+          "position": 3,
+          "isPrimary": false
+        }
+      ],
+      "collections": [
+        "shopall",
+        "fall-26",
+        "tops",
+        "t-shirts-longsleeves"
+      ]
+    },
+    {
+      "slug": "northline-tee",
+      "status": "ACTIVE",
+      "name": "Northline T-Shirt",
+      "price": 82.0,
+      "category": "Tops",
+      "subcategory": "T-Shirts & Longsleeves",
+      "tone": "stone",
+      "description": "An everyday cotton tee with a relaxed body and a clean, washed finish.",
+      "fit": "True to size with a relaxed body.",
+      "colors": [
+        "Black",
+        "Stone"
+      ],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "features": [
+        "Combed cotton",
+        "Pre-shrunk finish",
+        "Reinforced neckline",
+        "Minimal chest branding"
+      ],
+      "inStock": true,
+      "position": 2,
+      "featured": false,
+      "currency": "EGP",
+      "colorHex": {
+        "Black": "#171817",
+        "Stone": "#d7d0c4"
+      },
+      "images": [
+        {
+          "color": "Black",
+          "view": "front",
+          "url": "/products/northline-tee/black-front.jpg",
+          "position": 0,
+          "isPrimary": true
+        },
+        {
+          "color": "Black",
+          "view": "back",
+          "url": "/products/northline-tee/black-back.jpg",
+          "position": 1,
+          "isPrimary": false
+        },
+        {
+          "color": "Black",
+          "view": "detail",
+          "url": "/products/northline-tee/black-detail.jpg",
+          "position": 2,
+          "isPrimary": false
+        },
+        {
+          "color": "Black",
+          "view": "angled",
+          "url": "/products/northline-tee/black-angled.jpg",
+          "position": 3,
+          "isPrimary": false
+        },
+        {
+          "color": "Stone",
+          "view": "front",
+          "url": "/products/northline-tee/stone-front.jpg",
+          "position": 0,
+          "isPrimary": true
+        },
+        {
+          "color": "Stone",
+          "view": "back",
+          "url": "/products/northline-tee/stone-back.jpg",
+          "position": 1,
+          "isPrimary": false
+        },
+        {
+          "color": "Stone",
+          "view": "detail",
+          "url": "/products/northline-tee/stone-detail.jpg",
+          "position": 2,
+          "isPrimary": false
+        },
+        {
+          "color": "Stone",
+          "view": "angled",
+          "url": "/products/northline-tee/stone-angled.jpg",
+          "position": 3,
+          "isPrimary": false
+        }
+      ],
+      "collections": [
+        "shopall",
+        "fall-26",
+        "tops",
+        "t-shirts-longsleeves"
+      ]
+    },
+    {
+      "slug": "range-tee",
+      "status": "ACTIVE",
+      "name": "Range T-Shirt",
+      "price": 82.0,
+      "category": "Tops",
+      "subcategory": "T-Shirts & Longsleeves",
+      "tone": "sage",
+      "description": "Heavy cotton framed by a restrained elevation graphic and soft garment wash.",
+      "fit": "Easy unisex fit.",
+      "colors": [
+        "Sage",
+        "Bone"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "features": [
+        "240gsm cotton",
+        "Soft enzyme wash",
+        "Back elevation graphic",
+        "Woven side label"
+      ],
+      "inStock": true,
+      "position": 3,
+      "featured": false,
+      "currency": "EGP",
+      "colorHex": {
+        "Sage": "#8e9483",
+        "Bone": "#eee9de"
+      },
+      "images": [
+        {
+          "color": "Sage",
+          "view": "front",
+          "url": "/products/range-tee/sage-front.jpg",
+          "position": 0,
+          "isPrimary": true
+        },
+        {
+          "color": "Sage",
+          "view": "back",
+          "url": "/products/range-tee/sage-back.jpg",
+          "position": 1,
+          "isPrimary": false
+        },
+        {
+          "color": "Sage",
+          "view": "detail",
+          "url": "/products/range-tee/sage-detail.jpg",
+          "position": 2,
+          "isPrimary": false
+        },
+        {
+          "color": "Sage",
+          "view": "angled",
+          "url": "/products/range-tee/sage-angled.jpg",
+          "position": 3,
+          "isPrimary": false
+        },
+        {
+          "color": "Bone",
+          "view": "front",
+          "url": "/products/range-tee/bone-front.jpg",
+          "position": 0,
+          "isPrimary": true
+        },
+        {
+          "color": "Bone",
+          "view": "back",
+          "url": "/products/range-tee/bone-back.jpg",
+          "position": 1,
+          "isPrimary": false
+        },
+        {
+          "color": "Bone",
+          "view": "detail",
+          "url": "/products/range-tee/bone-detail.jpg",
+          "position": 2,
+          "isPrimary": false
+        },
+        {
+          "color": "Bone",
+          "view": "angled",
+          "url": "/products/range-tee/bone-angled.jpg",
+          "position": 3,
+          "isPrimary": false
+        }
+      ],
+      "collections": [
+        "shopall",
+        "fall-26",
+        "tops",
+        "t-shirts-longsleeves"
+      ]
+    },
+    {
+      "slug": "clubhouse-tee",
+      "status": "ACTIVE",
+      "name": "Clubhouse T-Shirt",
+      "price": 82.0,
+      "category": "Tops",
+      "subcategory": "T-Shirts & Longsleeves",
+      "tone": "forest",
+      "description": "A soft run-club tee with minimal front branding and a considered back graphic.",
+      "fit": "Relaxed fit.",
+      "colors": [
+        "Forest",
+        "Stone"
+      ],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "features": [
+        "Mid-heavy cotton",
+        "Pigment dyed",
+        "Small front mark",
+        "Run-club back print"
+      ],
+      "inStock": true,
+      "position": 4,
+      "featured": false,
+      "currency": "EGP",
+      "colorHex": {
+        "Forest": "#26322b",
+        "Stone": "#d7d0c4"
+      },
+      "images": [
+        {
+          "color": "Forest",
+          "view": "front",
+          "url": "/products/clubhouse-tee/forest-front.jpg",
+          "position": 0,
+          "isPrimary": true
+        },
+        {
+          "color": "Forest",
+          "view": "back",
+          "url": "/products/clubhouse-tee/forest-back.jpg",
+          "position": 1,
+          "isPrimary": false
+        },
+        {
+          "color": "Forest",
+          "view": "detail",
+          "url": "/products/clubhouse-tee/forest-detail.jpg",
+          "position": 2,
+          "isPrimary": false
+        },
+        {
+          "color": "Forest",
+          "view": "angled",
+          "url": "/products/clubhouse-tee/forest-angled.jpg",
+          "position": 3,
+          "isPrimary": false
+        },
+        {
+          "color": "Stone",
+          "view": "front",
+          "url": "/products/clubhouse-tee/stone-front.jpg",
+          "position": 0,
+          "isPrimary": true
+        },
+        {
+          "color": "Stone",
+          "view": "back",
+          "url": "/products/clubhouse-tee/stone-back.jpg",
+          "position": 1,
+          "isPrimary": false
+        },
+        {
+          "color": "Stone",
+          "view": "detail",
+          "url": "/products/clubhouse-tee/stone-detail.jpg",
+          "position": 2,
+          "isPrimary": false
+        },
+        {
+          "color": "Stone",
+          "view": "angled",
+          "url": "/products/clubhouse-tee/stone-angled.jpg",
+          "position": 3,
+          "isPrimary": false
+        }
+      ],
+      "collections": [
+        "shopall",
+        "fall-26",
+        "tops",
+        "t-shirts-longsleeves"
+      ]
+    },
+    {
+      "slug": "summit-gym-bag",
+      "status": "DRAFT",
+      "name": "Expedition Gym Bag",
+      "price": 155.0,
+      "category": "Accessories",
+      "subcategory": "Other",
+      "tone": "charcoal",
+      "description": "A compact 32L training bag with dedicated space for shoes, layers and daily essentials.",
+      "fit": "One size. 32L capacity.",
+      "colors": [
+        "Black",
+        "Forest"
+      ],
+      "sizes": [
+        "OS"
+      ],
+      "features": [
+        "Water-resistant shell",
+        "Separate shoe compartment",
+        "Internal zip pocket",
+        "Adjustable shoulder strap"
+      ],
+      "inStock": true,
+      "position": 118,
+      "featured": false,
+      "currency": "EGP",
+      "colorHex": {
+        "Black": "#171817",
+        "Forest": "#26322b"
+      },
+      "images": [
+        {
+          "color": "Black",
+          "view": "front",
+          "url": "/products/summit-gym-bag/black-front.jpg",
+          "position": 0,
+          "isPrimary": true
+        },
+        {
+          "color": "Black",
+          "view": "back",
+          "url": "/products/summit-gym-bag/black-back.jpg",
+          "position": 1,
+          "isPrimary": false
+        },
+        {
+          "color": "Black",
+          "view": "detail",
+          "url": "/products/summit-gym-bag/black-detail.jpg",
+          "position": 2,
+          "isPrimary": false
+        },
+        {
+          "color": "Black",
+          "view": "angled",
+          "url": "/products/summit-gym-bag/black-angled.jpg",
+          "position": 3,
+          "isPrimary": false
+        },
+        {
+          "color": "Forest",
+          "view": "front",
+          "url": "/products/summit-gym-bag/forest-front.jpg",
+          "position": 0,
+          "isPrimary": true
+        },
+        {
+          "color": "Forest",
+          "view": "back",
+          "url": "/products/summit-gym-bag/forest-back.jpg",
+          "position": 1,
+          "isPrimary": false
+        },
+        {
+          "color": "Forest",
+          "view": "detail",
+          "url": "/products/summit-gym-bag/forest-detail.jpg",
+          "position": 2,
+          "isPrimary": false
+        },
+        {
+          "color": "Forest",
+          "view": "angled",
+          "url": "/products/summit-gym-bag/forest-angled.jpg",
+          "position": 3,
+          "isPrimary": false
+        }
+      ],
+      "collections": [
+        "shopall",
+        "fall-26",
+        "accessories"
+      ]
+    },
+    {
+      "slug": "winter-tights",
+      "status": "ACTIVE",
+      "name": "Ridgeline Winter Tights",
+      "price": 175.0,
+      "category": "Bottoms",
+      "subcategory": "Tights",
+      "tone": "charcoal",
+      "description": "Thermal running tights with a brushed interior and wind protection where it counts.",
+      "fit": "Supportive full-length fit.",
+      "colors": [
+        "Black",
+        "Forest"
+      ],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "features": [
+        "Brushed thermal knit",
+        "Wind-resistant front panel",
+        "Rear phone pocket",
+        "Reflective mark"
+      ],
+      "inStock": true,
+      "position": 7,
+      "featured": false,
+      "currency": "EGP",
+      "colorHex": {
+        "Black": "#171817",
+        "Forest": "#26322b"
+      },
+      "images": [
+        {
+          "color": "Black",
+          "view": "front",
+          "url": "/products/winter-tights/black-front.jpg",
+          "position": 0,
+          "isPrimary": true
+        },
+        {
+          "color": "Black",
+          "view": "back",
+          "url": "/products/winter-tights/black-back.jpg",
+          "position": 1,
+          "isPrimary": false
+        },
+        {
+          "color": "Black",
+          "view": "detail",
+          "url": "/products/winter-tights/black-detail.jpg",
+          "position": 2,
+          "isPrimary": false
+        },
+        {
+          "color": "Black",
+          "view": "angled",
+          "url": "/products/winter-tights/black-angled.jpg",
+          "position": 3,
+          "isPrimary": false
+        },
+        {
+          "color": "Forest",
+          "view": "front",
+          "url": "/products/winter-tights/forest-front.jpg",
+          "position": 0,
+          "isPrimary": true
+        },
+        {
+          "color": "Forest",
+          "view": "back",
+          "url": "/products/winter-tights/forest-back.jpg",
+          "position": 1,
+          "isPrimary": false
+        },
+        {
+          "color": "Forest",
+          "view": "detail",
+          "url": "/products/winter-tights/forest-detail.jpg",
+          "position": 2,
+          "isPrimary": false
+        },
+        {
+          "color": "Forest",
+          "view": "angled",
+          "url": "/products/winter-tights/forest-angled.jpg",
+          "position": 3,
+          "isPrimary": false
+        }
+      ],
+      "collections": [
+        "shopall",
+        "fall-26",
+        "bottoms",
+        "tights"
+      ]
+    }
+  ]
+}
