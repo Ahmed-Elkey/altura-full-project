@@ -1,0 +1,1 @@
+{"name": "ALTURA", "short_name": "ALTURA", "description": "Performance running apparel shaped by changing ground.", "start_url": "/", "display": "standalone", "background_color": "#ffffff", "theme_color": "#1F2A24", "icons": [{"src": "/icon.svg", "sizes": "any", "type": "image/svg+xml"}]}
